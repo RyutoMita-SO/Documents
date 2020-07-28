@@ -8,3 +8,4 @@
 
 ## Git
 [Git用語集](https://github.com/RyutoMita-SO/Documents/blob/master/Git/Git%E7%94%A8%E8%AA%9E%E9%9B%86.md)
+[GitTips](https://github.com/RyutoMita-SO/Documents/blob/master/Git/GitTips.md)
