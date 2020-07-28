@@ -1,7 +1,7 @@
 # Documents
 
 ## ログ
-[Todoアプリ作成ログ](https://github.com/RyutoMita-SO/Documents/blob/master/%E3%83%AD%E3%82%B0/todo_application_laravel.md)  
+[Todoアプリ作成ログ](https://github.com/RyutoMita-SO/Documents/tree/master/Log/todo_application_laravel)  
 
 ## GitHub
 [GitHubTips](https://github.com/RyutoMita-SO/Documents/blob/master/GitHub/GitHubTips.md)
