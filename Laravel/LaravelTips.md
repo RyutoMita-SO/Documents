@@ -49,3 +49,36 @@ Laravelでも実装されている。
 return Carbon::createFromFormat('Y-m-d', $this->attributes['due_date'])->format('Y/m/d');
 ```
 createFromFormatでインスタンスを作成し、Y/m/dというフォーマットで出力してそれをreturnで返している。  
+
+### Tinkerとは？  
+参考：[Laravelのtinkerを使えるとちょっと幸せになれる](https://qiita.com/juve_534/items/96dc6e7e0652dced1428)  
+artisanコマンドが使えるディレクトリ配下で`php artisan tinker`を実行することで、  
+Laravelを対話的に動かすことができるコマンド。  
+動作確認の際に便利。  
+
+### find()、get()、first()、where()、all()の返り値早見表  
+参考：[【Laravel】DB登録値取得時のfind()、get()、first()の返り値早見表](https://qiita.com/sola-msr/items/fac931c72e1c46ae5f0f)  
+* find()  
+`App\Model::find('id') `の返り値はModelのオブジェクト。  
+idと一致したデータを見つけて返してくれる。  
+
+* get()  
+`App\Model::where('カラム名', カラム内の値)->get()`の返り値はCollectionクラス  
+（中身はModelのオブジェクト。ゆえにforeach()で回せば各々の値を取得できる。） 
+whereで一致した値を全て取得している。  
+※whereは下部参照  
+
+* first()  
+`App\Model::where('カラム名', カラム内の値)->first()`の返り値はModelのオブジェクト  
+上記のwhere条件に一致した一番最初のデータを取得してくる。  
+
+* where()   
+参考：[WHERE句について](https://www.ritolab.com/entry/93#aj_11)
+`App\Model::where('カラム名', カラム内の値)`の返り値はBuilderクラス  
+カラム名とカラム内の値に一致したデータのインスタンスを作成されている（SQLを作っただけ？）。  
+つまりwhereだけだと値を取得しているわけではないので  
+QueryBuilderのgetメソッドなどを使用して値を取得しないと結果の入ったインスタンスが作られる。
+
+* all()  
+App\Model::all() の返り値はCollectionクラス  
+全てのデータを取得してくる。  
