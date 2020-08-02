@@ -33,4 +33,19 @@ foldersテーブル内の`iD`はincrementで自動作成されており、裏で
 `foreign('このテーブルで設定したカラム')->references('外部制約で紐づけたいカラム')->on('外部制約で紐づけたいカラムを保持するテーブル');`  
 を宣言する。  
 
-
+### Carbonとは？  
+参考：[【Laravel】Carbonを初めて使ってみた](https://qiita.com/mackeyTA/items/e8b5e47a9f020a1902c0)  
+参考：[全217件！Carbonで時間操作する実例](https://blog.capilano-fw.com/?p=867#createFromFormat)  
+PHPに標準実装されているDateTimeクラスを継承した日時を扱うクラス。
+Laravelでも実装されている。  
+日付は表示形式が色々と違うため、これを使うと便利。  
+使うには、使うファイル内で`use Carbon\Carbon;`と宣言。  
+  
+日時フォーマットからインスタンスを作成する：`Carbon::createFromFormat('フォーマット（Y-m-dなど）','データ（2020-08-02など）');`  
+※あくまでインスタンスを作成するので、データとフォーマットの型は一致していないとエラーが起こる  
+指定したフォーマットで出力する：`->format('フォーマット');`  
+▼例
+```
+return Carbon::createFromFormat('Y-m-d', $this->attributes['due_date'])->format('Y/m/d');
+```
+createFromFormatでインスタンスを作成し、Y/m/dというフォーマットで出力してそれをreturnで返している。  
