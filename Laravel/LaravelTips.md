@@ -2,6 +2,69 @@
 
 [戻る](https://github.com/RyutoMita-SO/Documents)  
 
+### オブジェクト指向について（Laravel）  
+参考：[オブジェクト指向について](https://laraweb.net/surrounding/466/)  
+* クラスとは?  
+いわゆる**設計図**といわれるもの。  
+設計図（=クラス）からインスタンス（オブジェクト）を作ることを**オブジェクト指向**と呼ぶ。  
+書き方は以下。  
+```
+class クラス名 {
+  実装したい処理
+}
+```
+
+* プロパティとは?  
+クラス内に定義された**変数**。  
+public、private、protected (アクセス修飾子)のいずれかで定義する。  
+public：どこからでもアクセスできる  
+private：そのクラスと、サブクラスからしかアクセスできない  
+protected：そのクラスからしかアクセスできない  
+
+* メソッドとは?  
+クラス内に定義された**関数**。  
+
+* インスタンスとは?  
+クラスの**実体**。  
+```
+$インスタンス名 = new クラス名
+```
+クラス内に定義されている変数や関数などに数値や文字などを渡すなどして実行結果を得るもの。  
+（設計図だけでは結果は得られないため、結果を得るためのインスタンスを作る必要がある？）  
+
+▼例  
+
+```
+class Math {
+  //プロパティを定義
+  public $number1;
+  public $number2;
+ 
+  //メソッドを定義
+  function add() {
+  return $this->number1 + $this->number2;
+  }
+  function minus() {
+  return $this->number1 - $this->number2;
+  }
+}
+```
+
+```
+//Mathクラスのオブジェクトを作成
+$math = new Math;
+ 
+//プロパティに値を代入
+$math->number1 = 7;
+$math->number2 = 5;
+ 
+//メソッドを実行して結果を取得
+$result1 = $math->add();
+$result2 = $math->minus();
+ 
+echo "足し算の結果は{$result1}、引き算の結果は{$result2}です。";
+```
+
 ### 外部キー制約を付けるとき  
 参考：[【Laravel】外部キー制約があるテーブルのmigrateができません](https://teratail.com/questions/187718)  
 参考：[【Laravel】 5.8系にアップデートしてマイグレーションファイルを自動生成する時に注意する事](https://blog.websandbag.com/entry/2019/06/09/111933)  
