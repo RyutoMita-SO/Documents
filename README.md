@@ -13,5 +13,11 @@
 ## Laravel
 [LaravelTips](https://github.com/RyutoMita-SO/Documents/blob/master/Laravel/LaravelTips.md)  
 
+## Linux
+[LinuxTips](https://github.com/RyutoMita-SO/Documents/blob/master/Linux/LinuxTips.md)
+
+## AWS
+[AWSTips](https://github.com/RyutoMita-SO/Documents/blob/master/AWS/AWSTips.md)
+
 ## Other
 [OtherTips](https://github.com/RyutoMita-SO/Documents/blob/master/Other/OtherTips.md)
