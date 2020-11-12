@@ -12,4 +12,6 @@
   EC2上にDockerComposeを使えるようにする手順。Dockerを使えるようにしただけではDockerComposeを使えない。
   [Install Docker Compose](https://docs.docker.com/compose/install/)
   
-  
+## Git連  
+* [AWS EC2 AmazonLinux2 Gitをインストールする](https://qiita.com/miriwo/items/8d5b35950232c1126d36)  
+  GitをEC2にインストールするために必要な手順。
