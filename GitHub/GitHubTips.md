@@ -5,6 +5,6 @@
     
 例：[ファイルを新しい場所に移動する](https://docs.github.com/ja/github/managing-files-in-a-repository/moving-a-file-to-a-new-location)
 
-* [GitHubのIssue・Pull Requestのテンプレート機能を使おう](https://qiita.com/nyamogera/items/3fe6985b45fbd5377184)
+* [GitHubのIssue・Pull Requestのテンプレート機能を使おう](https://qiita.com/nyamogera/items/3fe6985b45fbd5377184)  
   Githubのプルリクにテンプレート文を追加するときに行う操作。  
   .github配下にpull_request_template.mdに何か書いておくとそれがプルリク時に反映されている。
